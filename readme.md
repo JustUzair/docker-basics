@@ -72,4 +72,29 @@
 
 
 # Docker-Compose
+
 ## Creating and Running Containers using `docker-compose`
+```bash
+    docker-compose up
+```
+
+## Stopping and Removing Containers using `docker-compose`
+```bash
+    docker-compose down
+```
+
+## Force build image using `docker-compose`
+```bash
+    docker-compose up --build
+```
+
+## Creating and running seperate environment containers using multiple YML files
+- include `--build` to force re-build image
+- Running development environment container
+```bash
+    docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+```
+- Running production environment container
+```bash
+    docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+```
